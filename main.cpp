@@ -12,38 +12,7 @@
 #include "Driver.hpp"
 using namespace std;
 
-int BinarySearch(int * a, int n, int val){
-    int left, right, mid;
-    left = 0;
-    right = n-1;
-    while(left<=right){
-        mid=(left+right)/2;
-        if(a[mid] == val)
-            return mid;
-        else if(a[mid > val])
-            right = mid-1;
-        else
-            left = mid+1;
-            
-    }
-    return -1;
-}
 
-void InsertionSort(int * a, int n){
-    int i, j, temp;
-    for(i = 1; i<n; i++)
-    {
-        temp = a[i];
-        j = i-1;
-        //while((a[j] > a[i]) && j>=0){     SAI !!!!!!
-        while((a[j] > temp)&& j>=0){
-            a[j+1] = a[j];
-            j--;
-        }
-        j++;
-        a[j] = temp;
-    }
-}
 
 int main(int argc, const char * argv[]) {
     // insert code here...
